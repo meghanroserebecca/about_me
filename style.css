@@ -1,11 +1,16 @@
 body {
-  background-color: #FDD;
+  background-color: rgb(0, 204, 102);
 }
 
 main {
   width: 500px;
   margin: 0 auto;
   background-color: rgb(255, 180, 180);
+}
+
+img {
+  width: 500px;
+  margin: 0 auto;
 }
 
 div {
@@ -16,5 +21,18 @@ div {
 
 ul {
   font-family: fantasy;
-  font-color: rgb(255, 0, 102);
+  color: rgb(255, 0, 102);
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+blockquote {
+  font-family: cursive;
+  color: rgb(102, 0, 255);
 }
