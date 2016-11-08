@@ -4,6 +4,8 @@ console.log('Hello from app.js');
 
 var firstYesOrNoQuestionAnswer = prompt('I challenge you to a battle of wits. For the Princess! To the Death! Do you accept?');
 
+console.log('First question answered with ' + firstYesOrNoQuestionAnswer);
+
 if (firstYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
 firstYesOrNoQuestionAnswer.toLowerCase() == 'y') {
   alert('Good, then pour the wine...Inhale this, but do not touch.');
@@ -17,6 +19,8 @@ else {
 }
 
 var secondYesOrNoQuestionAnswer = prompt('Do you smell anything?');
+
+console.log('Second question answered with ' + secondYesOrNoQuestionAnswer);
 
 if (secondYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
 secondYesOrNoQuestionAnswer.toLowerCase() === 'n') {
@@ -36,6 +40,8 @@ secondYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
 secondYesOrNoQuestionAnswer.toLowerCase() === 'n') {
   var thirdYesOrNoQuestionAnswer = prompt('Turn away. Good! Now you may look. I have placed the iocane powder in one of our two wine glasses. The battle of wits has begun. It ends when you decide and we both drink who is right and who is dead. All right, do you drink from your own cup?');
 
+  console.log('Third question answered with ' + thirdYesOrNoQuestionAnswer);
+
   if (thirdYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
 thirdYesOrNoQuestionAnswer.toLowerCase() === 'y') {
     alert('You have died. They were both poisoned. I spent the last few years building up an immunity to iocane powder.');
@@ -51,6 +57,8 @@ thirdYesOrNoQuestionAnswer.toLowerCase() === 'n') {
 
 var fourthYesOrNoQuestionAnswer = prompt('Have you ever heard of Plato? Aristotle? Socrates?');
 
+console.log('Fourth question answered with ' + fourthYesOrNoQuestionAnswer);
+
 if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
 fourthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
   alert('Morons.');
@@ -65,6 +73,8 @@ else {
 
 var fifthYesOrNoQuestionAnswer = prompt('Do you want to get into a land war in Asia, or challenge a Sicilian when DEATH is on the line?');
 
+console.log('Fifth question answered with ' + fifthYesOrNoQuestionAnswer);
+
 if (fifthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
 fifthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
   alert('Clearly, you are a moron.');
@@ -74,5 +84,5 @@ fifthYesOrNoQuestionAnswer.toLowerCase() == 'n') {
   alert('Then at least you are not a COMPLETE moron!');
 }
 else {
-  alert('Truly, you have a dizzying intellect.')
+  alert('Truly, you have a dizzying intellect.');
 }
