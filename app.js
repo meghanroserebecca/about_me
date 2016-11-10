@@ -68,22 +68,27 @@ function thirdQuestionFunction() {
 
 thirdQuestionFunction();
 
-/*var fourthYesOrNoQuestionAnswer = prompt('Have you ever heard of Plato? Aristotle? Socrates?');
+function fourthQuestionFunction() {
+  var fourthYesOrNoQuestionAnswer = prompt('Have you ever heard of Plato? Aristotle? Socrates?');
 
-console.log('Fourth question answered with ' + fourthYesOrNoQuestionAnswer);
+  console.log('Fourth question answered with ' + fourthYesOrNoQuestionAnswer);
 
-if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
-fourthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
-  alert('Morons.');
-}
-else if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
-fourthYesOrNoQuestionAnswer.toLowerCase() === 'n') {
-  alert('You are a moron.');
-}
-else {
-  alert('Are we even speaking the same language, here?');
+  if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
+  fourthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
+    alert('Morons.');
+  }
+  else if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
+  fourthYesOrNoQuestionAnswer.toLowerCase() === 'n') {
+    alert('You are a moron.');
+  }
+  else {
+    alert('Are we even speaking the same language, here?');
+  }
 }
 
+fourthQuestionFunction();
+
+/*
 var fifthYesOrNoQuestionAnswer = prompt('Do you want to get into a land war in Asia, or challenge a Sicilian when DEATH is on the line?');
 
 console.log('Fifth question answered with ' + fifthYesOrNoQuestionAnswer);
