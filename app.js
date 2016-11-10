@@ -2,7 +2,11 @@
 
 console.log('Hello from app.js');
 
+<<<<<<< HEAD
 /*var firstYesOrNoQuestionAnswer = prompt('I challenge you to a battle of wits. For the Princess! To the Death! Do you accept?');
+=======
+var firstYesOrNoQuestionAnswer = prompt('I challenge you to a battle of wits. For the Princess! To the Death! Do you accept?');
+>>>>>>> master
 
 console.log('First question answered with ' + firstYesOrNoQuestionAnswer);
 
@@ -85,6 +89,7 @@ fifthYesOrNoQuestionAnswer.toLowerCase() == 'n') {
 }
 else {
   alert('Truly, you have a dizzying intellect.');
+<<<<<<< HEAD
 }*/
 
 var cupNumberGuess = parseInt(prompt('Ok, all kidding aside, I have seriously put iocane powder into 9 of these 10 cups. \
@@ -141,4 +146,6 @@ while (countryGuessCount < 6) {
     alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
     countryGuessCount++;
   }
+=======
+>>>>>>> master
 }
