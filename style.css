@@ -1,0 +1,40 @@
+body {
+  background-color: rgb(0, 204, 102);
+}
+
+main {
+  width: 500px;
+  margin: 0 auto;
+  background-color: rgb(255, 180, 180);
+}
+
+img {
+  width: 500px;
+  margin: 0 auto;
+}
+
+div {
+  background-color: rgb(255,0,0);
+  width: 250px;
+  height: 100px;
+}
+
+ul {
+  font-family: fantasy;
+  color: rgb(255, 0, 102);
+}
+
+h1 {
+  font-family: sans-serif;
+}
+
+h2 {
+  font-family: sans-serif;
+}
+
+blockquote {
+  font-family: cursive;
+  color: rgb(102, 0, 255);
+}
+Contact GitHub API Training Shop Blog About
+© 2016 GitHub, Inc. Terms Privacy S
