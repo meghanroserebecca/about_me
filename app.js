@@ -25,44 +25,50 @@ function firstQuestionFunction() {
 
 firstQuestionFunction();
 
-/*var secondYesOrNoQuestionAnswer = prompt('Do you smell anything?');
+function secondQuestionFunction() {
+  var secondYesOrNoQuestionAnswer = prompt('Do you smell anything?');
 
-console.log('Second question answered with ' + secondYesOrNoQuestionAnswer);
+  console.log('Second question answered with ' + secondYesOrNoQuestionAnswer);
 
-if (secondYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
-secondYesOrNoQuestionAnswer.toLowerCase() === 'n') {
-  alert('What you do not smell is iocane powder. It is odorless, tasteless, dissolves instantly in liquid and is among the most deadly poisons known to man. ');
-}
-else if (secondYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
-secondYesOrNoQuestionAnswer.toLowerCase() === 'y'){
-  alert('You are a liar. You smell nothing, and what you do not smell is iocane powder. It is odorless, tasteless, dissolves instantly in liquid and is among the most deadly poisons known to man.');
-}
-else {
-  alert('Truly, you have a dizzying intellect. This battle of wits is over before it\'s begun');
+  if (secondYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
+  secondYesOrNoQuestionAnswer.toLowerCase() === 'n') {
+    alert('What you do not smell is iocane powder. It is odorless, tasteless, dissolves instantly in liquid and is among the most deadly poisons known to man. ');
+  }
+  else if (secondYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
+  secondYesOrNoQuestionAnswer.toLowerCase() === 'y'){
+    alert('You are a liar. You smell nothing, and what you do not smell is iocane powder. It is odorless, tasteless, dissolves instantly in liquid and is among the most deadly poisons known to man.');
+  }
+  else {
+    alert('Truly, you have a dizzying intellect. This battle of wits is over before it\'s begun');
+  }
 }
 
-if (secondYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
-secondYesOrNoQuestionAnswer.toLowerCase() === 'y' ||
-secondYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
-secondYesOrNoQuestionAnswer.toLowerCase() === 'n') {
+secondQuestionFunction();
+
+
+function thirdQuestionFunction() {
+
   var thirdYesOrNoQuestionAnswer = prompt('Turn away. Good! Now you may look. I have placed the iocane powder in one of our two wine glasses. The battle of wits has begun. It ends when you decide and we both drink who is right and who is dead. All right, do you drink from your own cup?');
 
   console.log('Third question answered with ' + thirdYesOrNoQuestionAnswer);
 
   if (thirdYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
-thirdYesOrNoQuestionAnswer.toLowerCase() === 'y') {
+  thirdYesOrNoQuestionAnswer.toLowerCase() === 'y') {
     alert('You have died. They were both poisoned. I spent the last few years building up an immunity to iocane powder.');
   }
   else if (thirdYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
-thirdYesOrNoQuestionAnswer.toLowerCase() === 'n') {
-    alert('Then drink deep of my cup, as I drink deep of yours. Now, you have died. They were both poisoned. I spent the last few years building up an immunity to iocane powder.');
+  thirdYesOrNoQuestionAnswer.toLowerCase() === 'n') {
+    alert('Then drink deep of my cup, as I drink deep of yours. Now, you have died. Both cups were both poisoned. I spent the last few years building up an immunity to iocane powder.');
   }
   else {
     alert('Truly, you have a dizzying intellect.');
   }
 }
 
-var fourthYesOrNoQuestionAnswer = prompt('Have you ever heard of Plato? Aristotle? Socrates?');
+
+thirdQuestionFunction();
+
+/*var fourthYesOrNoQuestionAnswer = prompt('Have you ever heard of Plato? Aristotle? Socrates?');
 
 console.log('Fourth question answered with ' + fourthYesOrNoQuestionAnswer);
 
@@ -149,5 +155,4 @@ while (countryGuessCount < 6) {
     alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
     countryGuessCount++;
   }
-}
-*/
+}*/
