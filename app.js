@@ -1,28 +1,31 @@
 'use strict';
 
 console.log('Hello from app.js');
+var userName = prompt('What is your name, challenger?');
+var score = 0;
 
-<<<<<<< HEAD
-/*var firstYesOrNoQuestionAnswer = prompt('I challenge you to a battle of wits. For the Princess! To the Death! Do you accept?');
-=======
-var firstYesOrNoQuestionAnswer = prompt('I challenge you to a battle of wits. For the Princess! To the Death! Do you accept?');
->>>>>>> master
+function firstQuestionFunction() {
+  var firstYesOrNoQuestionAnswer = prompt('I challenge you to a battle of wits. For the Princess! To the Death! Do you accept?');
 
-console.log('First question answered with ' + firstYesOrNoQuestionAnswer);
+  console.log('First question answered with ' + firstYesOrNoQuestionAnswer);
 
-if (firstYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
-firstYesOrNoQuestionAnswer.toLowerCase() == 'y') {
-  alert('Good, then pour the wine...Inhale this, but do not touch.');
+  if (firstYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
+  firstYesOrNoQuestionAnswer.toLowerCase() == 'y') {
+    alert('Good, then pour the wine...Inhale this, but do not touch.');
+    score++;
+  }
+  else if (firstYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
+  firstYesOrNoQuestionAnswer.toLowerCase() === 'n'){
+    alert('You\'re just stalling, now. Pour the wine...Inhale this, but do not touch');
+  }
+  else {
+    alert('Truly, you have a dizzying intellect.');
+  }
 }
-else if (firstYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
-firstYesOrNoQuestionAnswer.toLowerCase() === 'n'){
-  alert('You\'re just stalling, now. Pour the wine...Inhale this, but do not touch');
-}
-else {
-  alert('Truly, you have a dizzying intellect.');
-}
 
-var secondYesOrNoQuestionAnswer = prompt('Do you smell anything?');
+firstQuestionFunction();
+
+/*var secondYesOrNoQuestionAnswer = prompt('Do you smell anything?');
 
 console.log('Second question answered with ' + secondYesOrNoQuestionAnswer);
 
@@ -90,7 +93,7 @@ fifthYesOrNoQuestionAnswer.toLowerCase() == 'n') {
 else {
   alert('Truly, you have a dizzying intellect.');
 <<<<<<< HEAD
-}*/
+}
 
 var cupNumberGuess = parseInt(prompt('Ok, all kidding aside, I have seriously put iocane powder into 9 of these 10 cups. \
   Not so much as to kill you on the first failed taste, but on the fourth failed attempt, you die. \
@@ -146,6 +149,5 @@ while (countryGuessCount < 6) {
     alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
     countryGuessCount++;
   }
-=======
->>>>>>> master
 }
+*/
