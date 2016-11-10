@@ -107,24 +107,27 @@ function fifthQuestionFunction() {
 }
 
 fifthQuestionFunction();
-/*
-var cupNumberGuess = parseInt(prompt('Ok, all kidding aside, I have seriously put iocane powder into 9 of these 10 cups. \
-  Not so much as to kill you on the first failed taste, but on the fourth failed attempt, you die. \
-  So which cup, from 1-10, do you choose?'));
-var secretNumber = 7;
-var guessCount = 0;
+
 var youLive = false;
-console.log ('The challenger has selected cup number: ', cupNumberGuess, 'the secretNumber is ', secretNumber );
-console.log ('numberGuess has type of ', typeof cupNumberGuess, 'secretNumber has type of ', typeof secretNumber);
-while (guessCount < 4){
-  if (cupNumberGuess === secretNumber) {
-    youLive = true;
-    guessCount = 4;
-  } else if (cupNumberGuess > secretNumber){
-    cupNumberGuess = parseInt(prompt('Hm. Interesting choice. By which I mean WRONG. You guessed too HIGH! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
-    console.log(cupNumberGuess);
-  } else {
-    cupNumberGuess = parseInt(prompt ('Hm. Interesting choice. By which I mean WRONG. You guessed too LOW! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
+
+function sixthQuestionFunction() {
+  var cupNumberGuess = parseInt(prompt('Ok, all kidding aside, I have seriously put iocane powder into 9 of these 10 cups. \
+    Not so much as to kill you on the first failed taste, but on the fourth failed attempt, you die. \
+    So which cup, from 1-10, do you choose?'));
+  var secretNumber = 7;
+  var guessCount = 0;
+  console.log ('The challenger has selected cup number: ', cupNumberGuess, 'the secretNumber is ', secretNumber );
+  console.log ('numberGuess has type of ', typeof cupNumberGuess, 'secretNumber has type of ', typeof secretNumber);
+  while (guessCount < 4){
+    if (cupNumberGuess === secretNumber) {
+      youLive = true;
+      guessCount = 4;
+    } else if (cupNumberGuess > secretNumber){
+      cupNumberGuess = parseInt(prompt('Hm. Interesting choice. By which I mean WRONG. You guessed too HIGH! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
+      console.log(cupNumberGuess);
+    } else {
+      cupNumberGuess = parseInt(prompt ('Hm. Interesting choice. By which I mean WRONG. You guessed too LOW! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
+    }
   }
 }
 
@@ -133,6 +136,8 @@ if (youLive) {
 } else {
   alert('And now, you have died. No more drinky drinky for you!');
 }
+
+sixthQuestionFunction();
 
 var countriesGuess = prompt('You survived the battle of wits and your game of chance! \
 Now, can you guess a country that the Dread Pirate Roberts has sailed to?');
