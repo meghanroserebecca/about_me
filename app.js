@@ -88,24 +88,26 @@ function fourthQuestionFunction() {
 
 fourthQuestionFunction();
 
+function fifthQuestionFunction() {
+  var fifthYesOrNoQuestionAnswer = prompt('Do you want to get into a land war in Asia, or challenge a Sicilian when DEATH is on the line?');
+
+  console.log('Fifth question answered with ' + fifthYesOrNoQuestionAnswer);
+
+  if (fifthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
+  fifthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
+    alert('Clearly, you are a moron.');
+  }
+  else if (fifthYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
+  fifthYesOrNoQuestionAnswer.toLowerCase() == 'n') {
+    alert('Then at least you are not a COMPLETE moron!');
+  }
+  else {
+    alert('Truly, you have a dizzying intellect.');
+  }
+}
+
+fifthQuestionFunction();
 /*
-var fifthYesOrNoQuestionAnswer = prompt('Do you want to get into a land war in Asia, or challenge a Sicilian when DEATH is on the line?');
-
-console.log('Fifth question answered with ' + fifthYesOrNoQuestionAnswer);
-
-if (fifthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
-fifthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
-  alert('Clearly, you are a moron.');
-}
-else if (fifthYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
-fifthYesOrNoQuestionAnswer.toLowerCase() == 'n') {
-  alert('Then at least you are not a COMPLETE moron!');
-}
-else {
-  alert('Truly, you have a dizzying intellect.');
-<<<<<<< HEAD
-}
-
 var cupNumberGuess = parseInt(prompt('Ok, all kidding aside, I have seriously put iocane powder into 9 of these 10 cups. \
   Not so much as to kill you on the first failed taste, but on the fourth failed attempt, you die. \
   So which cup, from 1-10, do you choose?'));
