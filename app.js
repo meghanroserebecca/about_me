@@ -33,6 +33,7 @@ function secondQuestionFunction() {
   if (secondYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
   secondYesOrNoQuestionAnswer.toLowerCase() === 'n') {
     alert('What you do not smell is iocane powder. It is odorless, tasteless, dissolves instantly in liquid and is among the most deadly poisons known to man. ');
+    score++;
   }
   else if (secondYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
   secondYesOrNoQuestionAnswer.toLowerCase() === 'y'){
@@ -76,6 +77,7 @@ function fourthQuestionFunction() {
   if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'yes' ||
   fourthYesOrNoQuestionAnswer.toLowerCase() === 'y') {
     alert('Morons.');
+    score++;
   }
   else if (fourthYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
   fourthYesOrNoQuestionAnswer.toLowerCase() === 'n') {
@@ -100,6 +102,7 @@ function fifthQuestionFunction() {
   else if (fifthYesOrNoQuestionAnswer.toLowerCase() === 'no' ||
   fifthYesOrNoQuestionAnswer.toLowerCase() == 'n') {
     alert('Then at least you are not a COMPLETE moron!');
+    score++;
   }
   else {
     alert('Truly, you have a dizzying intellect.');
@@ -108,63 +111,72 @@ function fifthQuestionFunction() {
 
 fifthQuestionFunction();
 
-var youLive = false;
 
 function sixthQuestionFunction() {
+  var youLive = false;
   var cupNumberGuess = parseInt(prompt('Ok, all kidding aside, I have seriously put iocane powder into 9 of these 10 cups. \
     Not so much as to kill you on the first failed taste, but on the fourth failed attempt, you die. \
     So which cup, from 1-10, do you choose?'));
   var secretNumber = 7;
-  var guessCount = 0;
+  var count = 0;
   console.log ('The challenger has selected cup number: ', cupNumberGuess, 'the secretNumber is ', secretNumber );
   console.log ('numberGuess has type of ', typeof cupNumberGuess, 'secretNumber has type of ', typeof secretNumber);
-  while (guessCount < 4){
+  while (count < 4){
     if (cupNumberGuess === secretNumber) {
       youLive = true;
-      guessCount = 4;
+      count = 4;
+      score++;
     } else if (cupNumberGuess > secretNumber){
       cupNumberGuess = parseInt(prompt('Hm. Interesting choice. By which I mean WRONG. You guessed too HIGH! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
       console.log(cupNumberGuess);
+      count++;
     } else {
       cupNumberGuess = parseInt(prompt ('Hm. Interesting choice. By which I mean WRONG. You guessed too LOW! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
+      count++;
     }
+  }
+  if (youLive) {
+    alert('You have succeeded, by avoiding death!');
+  } else {
+    alert('And now, you have died. No more drinky drinky for you!');
   }
 }
 
-if (youLive) {
-  alert('You have succeeded, by avoiding death!');
-} else {
-  alert('And now, you have died. No more drinky drinky for you!');
-}
+
 
 sixthQuestionFunction();
 
-var countriesGuess = prompt('You survived the battle of wits and your game of chance! \
-Now, can you guess a country that the Dread Pirate Roberts has sailed to?');
-var dreadPirateCountries = ['australia', 'new zealand', 'sicily', 'france'];
-var countryGuessCount = 0;
-var youGuessedIt = false;
+function seventhQuestionFunction() {
+  var countriesGuess = prompt('You survived the battle of wits and your game of chance! \
+  Now, can you guess a country that the Dread Pirate Roberts has sailed to?');
+  var dreadPirateCountries = ['australia', 'new zealand', 'sicily', 'france'];
+  var countryGuessCount = 0;
+  var youGuessedIt = false;
 
-while (countryGuessCount < 6) {
-  for (var i = 0; i < dreadPirateCountries.length; i++) {
-    console.log(dreadPirateCountries[i]);
-    console.log(countriesGuess);
-    if (countriesGuess.toLowerCase() === dreadPirateCountries[i]) {
-      youGuessedIt = true;
-      alert('Great work! I have sailed to ' + dreadPirateCountries[i]);
+  while (countryGuessCount < 6) {
+    for (var i = 0; i < dreadPirateCountries.length; i++) {
+      console.log(dreadPirateCountries[i]);
+      console.log(countriesGuess);
+      if (countriesGuess.toLowerCase() === dreadPirateCountries[i]) {
+        youGuessedIt = true;
+        alert('Great work! I have sailed to ' + dreadPirateCountries[i]);
+        break;
+        score++;
+      }
+    }
+    if (youGuessedIt) {
       break;
     }
-  }
-  if (youGuessedIt) {
-    break;
-  }
-  countryGuessCont++;
+    countryGuessCont++;
 
-  if (youGuessedIt === false) {
-    countriesGuess = prompt('Hm, nope. I fear I have never traveled there. Guess again! (Note to self: travel to ' + countriesGuess + ')');
-    countryGuessCount++;
-  } else {
-    alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
-    countryGuessCount++;
+    if (youGuessedIt === false) {
+      countriesGuess = prompt('Hm, nope. I fear I have never traveled there. Guess again! (Note to self: travel to ' + countriesGuess + ')');
+      countryGuessCount++;
+    } else {
+      alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
+      countryGuessCount++;
+    }
   }
-}*/
+}
+seventhQuestionFunction();
+alert('Thanks for playing ' + userName + '! You scored ' + score + ' out of 7!');
