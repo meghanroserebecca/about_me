@@ -98,17 +98,19 @@ console.log ('numberGuess has type of ', typeof cupNumberGuess, 'secretNumber ha
 while (guessCount < 4){
   if (cupNumberGuess === secretNumber) {
     youLive = true;
-    alert('You have succeeded, by avoiding death!');
-    break;
-  } else if (cupNumberGuess !== secretNumber && guessCount < 3){
-    youLive = false;
-    cupNumberGuess = parseInt(prompt('Hm. Interesting choice. By which I mean WRONG. I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
-    guessCount++;
+    guessCount = 4;
+  } else if (cupNumberGuess > secretNumber){
+    cupNumberGuess = parseInt(prompt('Hm. Interesting choice. By which I mean WRONG. You guessed too HIGH! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
     console.log(cupNumberGuess);
-  } else if (youLive = true && cupNumberGuess !== secretNumber) {
-    alert('And now, you have died. No more drinky drinky for you!');
-    break;
+  } else {
+    cupNumberGuess = parseInt(prompt ('Hm. Interesting choice. By which I mean WRONG. You guessed too LOW! I\'m certain you\'re feeling a bit...sickly, yes? Try again!'));
   }
+}
+
+if (youLive) {
+  alert('You have succeeded, by avoiding death!');
+} else {
+  alert('And now, you have died. No more drinky drinky for you!');
 }
 
 var countriesGuess = prompt('You survived the battle of wits and your game of chance! \
@@ -122,23 +124,21 @@ while (countryGuessCount < 6) {
     console.log(dreadPirateCountries[i]);
     console.log(countriesGuess);
     if (countriesGuess.toLowerCase() === dreadPirateCountries[i]) {
-      youGuessedIt === true;
+      youGuessedIt = true;
       alert('Great work! I have sailed to ' + dreadPirateCountries[i]);
       break;
-      countryGuesscount++;
     }
-    break;
   }
   if (youGuessedIt) {
     break;
   }
-  if (youGuessedIt === false && countryGuessCount < 6) {
+  countryGuessCont++;
+
+  if (youGuessedIt === false) {
     countriesGuess = prompt('Hm, nope. I fear I have never traveled there. Guess again! (Note to self: travel to ' + countriesGuess + ')');
     countryGuessCount++;
-    break;
   } else {
     alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
     countryGuessCount++;
   }
-  break;
 }
