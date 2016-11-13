@@ -153,30 +153,25 @@ function seventhQuestionFunction() {
   var countryGuessCount = 0;
   var youGuessedIt = false;
 
-  while (countryGuessCount < 6) {
+  while (countryGuessCount < 6 && !youGuessedIt) {
     for (var i = 0; i < dreadPirateCountries.length; i++) {
       console.log(dreadPirateCountries[i]);
       console.log(countriesGuess);
-      if (countriesGuess.toLowerCase() === dreadPirateCountries[i]) {
+      //if (countriesGuess.toLowerCase() === dreadPirateCountries[i]) {
+      if (dreadPirateCountries.includes(countriesGuess.toLowerCase())) {
         youGuessedIt = true;
-        alert('Great work! I have sailed to ' + dreadPirateCountries[i]);
+        alert('Great work! I have sailed to ' + countriesGuess);
         score++;
         break;
+      } else if (countriesGuess.toLowerCase() !== dreadPirateCountries[i]) {
+        countriesGuess = prompt('Hm, nope. I fear I have never traveled there. Guess again! (Note to self: travel to ' + countriesGuess + ')');
+        countryGuessCount++;
+      }else {
+        alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
+        countryGuessCount++;
       }
-    }
-    if (youGuessedIt) {
-      break;
-    }
-    countryGuessCont++;
-
-    if (youGuessedIt === false) {
-      countriesGuess = prompt('Hm, nope. I fear I have never traveled there. Guess again! (Note to self: travel to ' + countriesGuess + ')');
-      countryGuessCount++;
-    } else {
-      alert('I\'m sorry, but you\'re all out of guesses. Nice try! Here are the countries I have sailed to: ' + dreadPirateCountries[i]);
-      countryGuessCount++;
     }
   }
 }
 seventhQuestionFunction();
-alert('Thanks for playing ' + userName + '! You scored ' + score + ' out of 7!');
+alert('Thanks for playing ' + userName + '! You scored ' + score + ' out of 7 questions correct!');
