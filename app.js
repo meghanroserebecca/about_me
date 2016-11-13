@@ -160,7 +160,7 @@ function seventhQuestionFunction() {
       //if (countriesGuess.toLowerCase() === dreadPirateCountries[i]) {
       if (dreadPirateCountries.includes(countriesGuess.toLowerCase())) {
         youGuessedIt = true;
-        alert('Great work! I have sailed to ' + countriesGuess);
+        alert('Great work! I have sailed to ' + countriesGuess + '. I have sailed to ' + dreadPirateCountries[0] + ', ' + dreadPirateCountries[1] + ', ' + dreadPirateCountries[2] + ', and ' + dreadPirateCountries[3]);
         score++;
         break;
       } else if (countriesGuess.toLowerCase() !== dreadPirateCountries[i]) {
